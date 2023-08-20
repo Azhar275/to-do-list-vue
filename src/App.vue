@@ -1,6 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { computed } from 'vue'
+
+import { useAuthStore } from './stores/auth'
+
+const username = computed(() => useAuthStore().getUsername)
 </script>
 
 <template>
@@ -8,11 +13,17 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Kamu berhasil Dora!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink :to="{ name : 'test'}">Test</RouterLink>
+        <RouterLink
+          :to="{ name: 'Authenticated', params: { id: username ?? '' } }"
+        >
+          Profile
+        </RouterLink>
       </nav>
     </div>
   </header>
