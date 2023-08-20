@@ -98,10 +98,10 @@ const toggleCompleted = (index) => {
         text-decoration: line-through;
     }
     button {
-        .red {
+        &.red {
             color: red;
         }
-        .orange {
+        &.orange {
             color: orange;
         }
     }

@@ -3,9 +3,12 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import { computed } from 'vue'
 
-import { useAuthStore } from './stores/auth'
+// import { useAuthStore } from './stores/auth'
+import { d$auth } from './stores/auth';
 
-const username = computed(() => useAuthStore().getUsername)
+d$auth().a$setUser()
+
+const username = computed(() => d$auth().g$user?.id)
 </script>
 
 <template>
