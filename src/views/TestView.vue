@@ -58,7 +58,7 @@ const toggleCompleted = (index) => {
 
 <template>
     <div class="container">
-        <h1>test</h1>
+        <h1>To-Do List</h1>
 
         <!-- Data binding with ref -->
         <form @submit.prevent="addForm(nameInput)" method="post" @reset="resetForm()">
@@ -69,7 +69,7 @@ const toggleCompleted = (index) => {
             <button type="reset">Cancel</button>
         </form>
         <!-- <input class="input" v-model="nameInput" type="text" name="name" @keyup.enter="store.addList(nameInput); nameInput=''" placeholder="add new item"> -->
-
+        <h4>Double click the item to mark it finished</h4>
         <ol class="list">
             <template v-for="item, index in store.getList" v-bind:key="index">
                 <li @dblclick="toggleCompleted(index)" :class="{strike: item.completed}">
