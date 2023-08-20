@@ -16,7 +16,7 @@ const username = computed(() => d$auth().g$user?.id)
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="Kamu berhasil Dora!" />
+      <HelloWorld msg="You Succeed Access my To-Do List!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
