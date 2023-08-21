@@ -1,3 +1,8 @@
+### Name : Muh. Azhar Tawakkal
+### Role : Software Engineer
+### Campus : Universitas Hasanuddin
+
+
 # vue-to-do-list
 
 This template should help get you started developing with Vue 3 in Vite.
